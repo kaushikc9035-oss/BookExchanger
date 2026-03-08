@@ -1,0 +1,7 @@
+{
+  "name": "BookLoop",
+  "description": "A community-driven platform for borrowing, lending, and trading books locally.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
