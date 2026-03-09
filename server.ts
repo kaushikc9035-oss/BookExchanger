@@ -6,7 +6,8 @@ import { fileURLToPath } from "url";
 import cookieParser from "cookie-parser";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const db = new Database("bookloop.db");
+const dbPath = process.env.NODE_ENV === 'production' ? '/data/bookloop.db' : 'bookloop.db';
+const db = new Database(dbPath);
 
 // Initialize Database
 db.exec(`
